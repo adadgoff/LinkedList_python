@@ -27,7 +27,7 @@ class LinkedList:
         self.head = new_node
         self.size += 1
 
-    def insert(self, data, index):  # как поставить значение по умолчанию index=len()?
+    def insert(self, data, index):
         cur_node = self.head
         cur_index = 0
         new_node = Node(data)
@@ -94,9 +94,19 @@ class LinkedList:
             cur_index += 1
             cur_node = cur_node.next
 
+    def reverse(self):
+        prev = None
+        cur_node = self.head
+        next = None
+        while cur_node is not None:
+            next = cur_node.next
+            cur_node.next = prev
+            prev = cur_node
+            cur_node = next
+        self.head = prev
 
-if __name__ == "__main__":  # зачем так пишут?
-    # my_list = LinkedList([1, 2, 3])  Как можно так сделать?
+
+if __name__ == "__main__":
     my_list = LinkedList()
     my_list.append(1)
     my_list.append(3)
@@ -105,6 +115,9 @@ if __name__ == "__main__":  # зачем так пишут?
     print(my_list)
 
     my_list.insert(9, 4)
+    print(my_list)
+
+    my_list.reverse()
     print(my_list)
 
     my_list.remove(4)
