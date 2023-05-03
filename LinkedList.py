@@ -106,23 +106,24 @@ class LinkedList:
         self.head = prev
 
 
-if __name__ == "__main__":
-    my_list = LinkedList()
-    my_list.append(1)
-    my_list.append(3)
-    my_list.append(5)
-    my_list.append(7)
-    print(my_list)
+class Program:
+    if __name__ == "__main__":
+        my_list = LinkedList()
+        my_list.append(1)
+        my_list.append(3)
+        my_list.append(5)
+        my_list.append(7)
+        print(my_list)
 
-    my_list.insert(9, 4)
-    print(my_list)
+        my_list.insert(9, 4)
+        print(my_list)
 
-    my_list.reverse()
-    print(my_list)
+        my_list.reverse()
+        print(my_list)
 
-    my_list.remove(4)
-    print(my_list)
+        my_list.remove(4)
+        print(my_list)
 
-    print(str(my_list.value_at(3)) + '\n')
+        print(str(my_list.value_at(3)) + '\n')
 
-    print(len(my_list))
+        print(len(my_list))
