@@ -44,12 +44,12 @@ class LinkedList:
             new_node.next = after_cur_node
             self.size += 1
 
-    def append(self, data):  # добавление в конец
+    def append(self, data):
         cur_node = self.head
         new_node = Node(data)
-        if cur_node is None:  # size = 0
+        if cur_node is None:
             self.head = new_node
-        else:  # size != 0
+        else:
             while cur_node.next is not None:
                 cur_node = cur_node.next
             cur_node.next = new_node
